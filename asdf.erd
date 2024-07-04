@@ -1,0 +1,179 @@
+{
+  "$schema": "https://raw.githubusercontent.com/dineug/erd-editor/main/json-schema/schema.json",
+  "version": "3.0.0",
+  "settings": {
+    "width": 2000,
+    "height": 2000,
+    "scrollTop": -374.8868,
+    "scrollLeft": -442.1725,
+    "zoomLevel": 0.3,
+    "show": 431,
+    "database": 4,
+    "databaseName": "forin",
+    "canvasType": "ERD",
+    "language": 1,
+    "tableNameCase": 4,
+    "columnNameCase": 2,
+    "bracketType": 1,
+    "relationshipDataTypeSync": true,
+    "relationshipOptimization": false,
+    "columnOrder": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32,
+      64
+    ],
+    "maxWidthComment": -1,
+    "ignoreSaveSettings": 0
+  },
+  "doc": {
+    "tableIds": [
+      "czDHcGMAwlgsekPTDaD4L",
+      "cO7gspWRsO-b9cymEuatq"
+    ],
+    "relationshipIds": [],
+    "indexIds": [
+      "GAGXDoFu6J2tPM64f6aSi",
+      "JAaRPryalkkjq6vI_eQ-_",
+      "ZIeJulKCSyevAJD5i_5c4"
+    ],
+    "memoIds": []
+  },
+  "collections": {
+    "tableEntities": {
+      "czDHcGMAwlgsekPTDaD4L": {
+        "id": "czDHcGMAwlgsekPTDaD4L",
+        "name": "",
+        "comment": "",
+        "columnIds": [],
+        "seqColumnIds": [],
+        "ui": {
+          "x": 22.039333333333502,
+          "y": 440.09266666666645,
+          "zIndex": 2,
+          "widthName": 60,
+          "widthComment": 60,
+          "color": ""
+        },
+        "meta": {
+          "updateAt": 1718953159549,
+          "createAt": 1718953159549
+        }
+      },
+      "cO7gspWRsO-b9cymEuatq": {
+        "id": "cO7gspWRsO-b9cymEuatq",
+        "name": "",
+        "comment": "",
+        "columnIds": [],
+        "seqColumnIds": [],
+        "ui": {
+          "x": 902.0394,
+          "y": 413.4261,
+          "zIndex": 3,
+          "widthName": 60,
+          "widthComment": 60,
+          "color": "#FF1800"
+        },
+        "meta": {
+          "updateAt": 1718953211754,
+          "createAt": 1718953161076
+        }
+      }
+    },
+    "tableColumnEntities": {},
+    "relationshipEntities": {},
+    "indexEntities": {
+      "GAGXDoFu6J2tPM64f6aSi": {
+        "id": "GAGXDoFu6J2tPM64f6aSi",
+        "name": "name",
+        "tableId": "cO7gspWRsO-b9cymEuatq",
+        "indexColumnIds": [],
+        "seqIndexColumnIds": [],
+        "unique": true,
+        "meta": {
+          "updateAt": 1718953199908,
+          "createAt": 1718953177804
+        }
+      },
+      "JAaRPryalkkjq6vI_eQ-_": {
+        "id": "JAaRPryalkkjq6vI_eQ-_",
+        "name": "password",
+        "tableId": "cO7gspWRsO-b9cymEuatq",
+        "indexColumnIds": [],
+        "seqIndexColumnIds": [],
+        "unique": false,
+        "meta": {
+          "updateAt": 1718953186340,
+          "createAt": 1718953182660
+        }
+      },
+      "ZIeJulKCSyevAJD5i_5c4": {
+        "id": "ZIeJulKCSyevAJD5i_5c4",
+        "name": "age",
+        "tableId": "cO7gspWRsO-b9cymEuatq",
+        "indexColumnIds": [],
+        "seqIndexColumnIds": [],
+        "unique": false,
+        "meta": {
+          "updateAt": 1718953189090,
+          "createAt": 1718953187052
+        }
+      }
+    },
+    "indexColumnEntities": {},
+    "memoEntities": {}
+  },
+  "lww": {
+    "settings.databaseName": [
+      "settings",
+      -1,
+      -1,
+      {
+        "databaseName": 1718953148048
+      }
+    ],
+    "czDHcGMAwlgsekPTDaD4L": [
+      "tableEntities",
+      1718953159548,
+      -1,
+      {}
+    ],
+    "cO7gspWRsO-b9cymEuatq": [
+      "tableEntities",
+      1718953161076,
+      -1,
+      {
+        "ui.color": 1718953208565
+      }
+    ],
+    "GAGXDoFu6J2tPM64f6aSi": [
+      "indexEntities",
+      1718953177804,
+      -1,
+      {
+        "name": 1718953181515,
+        "unique": 1718953199907
+      }
+    ],
+    "JAaRPryalkkjq6vI_eQ-_": [
+      "indexEntities",
+      1718953182660,
+      -1,
+      {
+        "name": 1718953184800,
+        "unique": 1718953186340
+      }
+    ],
+    "ZIeJulKCSyevAJD5i_5c4": [
+      "indexEntities",
+      1718953187052,
+      -1,
+      {
+        "name": 1718953189089
+      }
+    ]
+  }
+}

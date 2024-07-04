@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="strike" onclick="strike()">Strike</button>
+    <button id="ball" onclick="ball()">Ball</button>
+    <button id="restart" style="display:none" onclick="restart()">
+        재시작
+    </button>
+    <br />
+    B:<b id="b">0</b><br />
+    S:<b id="s">0</b><br />
+    O:<b id="o">0</b><br />
+</body>
+<script>
+    //1. 버튼에 클릭 이벤트 부여
+    //2. 버튼 클릭시 정상 작동 여부
+    //3. 4볼일때 정상적으로 초기화 되는가?
+    //4. 3 스트라이크 일 때 정상적으로 초기화 되는가?(out +1)
+    //5. 3아웃을 때 게임이 종료 되는가?(재시작버튼 보임)
+    //6. 재시작 버튼 클릭시 초기화 되는가?
+    var balls = 0;
+    var strikes = 0;
+    var outs = 0;
+
+    function strike() {
+        strikes++;
+        document.getElementById("s").innerText = strikes;
+        checkGameStatus();
+    }
+
+    function ball() {
+        balls++;
+        document.getElementById("b").innerText = balls;
+        checkGameStatus();
+    }
+
+    function restart() {
+        balls = 0;
+        strikes = 0;
+        outs = 0;
+
+        document.getElementById("b").innerText = balls;
+        document.getElementById("s").innerText = strikes;
+        document.getElementById("o").innerText = outs;
+        document.getElementById("strike").disabled = false;
+        document.getElementById("ball").disabled = false;
+        document.getElementById("restart").style.display = "none";
+    }
+
+    function checkGameStatus() {
+        if (strikes === 3) {
+            outs++;
+            document.getElementById("o").innerText = outs;
+            if (outs === 3) {
+                endGame();
+            } else {
+                resetCounts();
+            }
+        } else if (balls === 4) {
+            resetCounts();
+        }
+    }
+
+    function resetCounts() {
+        balls = 0;
+        strikes = 0;
+        document.getElementById("b").innerText = balls;
+        document.getElementById("s").innerText = strikes;
+    }
+
+    function endGame() {
+        document.getElementById("strike").disabled = true;
+        document.getElementById("ball").disabled = true;
+        document.getElementById("restart").style.display = "block";
+    }
+</script>
+
+</html>

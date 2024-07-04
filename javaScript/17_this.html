@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const timer = {
+            name: 'kim',
+            timeout: function () {
+                //window객체 setTimeout의 내부에서 콜백을 호출중이라서
+                //this는 window객체
+                // setTimeout(function () {
+                //   console.log('t:', this.name);
+                //   console.log(this);
+                // }, 3000)
+                //timer객체 timeout속성의 메소드에 선언되었으므로
+                //this는 timer객체이다.
+                //setTimeout, setInterval 함수에서는 this사용시 화살표 사용
+                //나머지 경우에 일반(익명) 함수 사용할것.
+                setTimeout(() => {
+                    console.log('t:', this.name);
+                    console.log(this);
+                }, 3000)
+            }
+        }
+        timer.timeout()
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 150px;
+            height: 150px;
+            background-color: aqua;
+            text-align: center;
+            line-height: 150px;
+        }
+    </style>
+
+    <script>
+        window.onload = function () {
+            let mouseZone = document.getElementById('id')
+
+            mouseZone.addEventListener('mouseenter', function () {
+                mouseZone.innerHTML = 'Mouse Enter!'
+                mouseZone.style.backgroundColor = 'blue'
+                mouseZone.style.fontWeight = 'bold'
+            })
+            mouseZone.addEventListener('mouseout', function () {
+                mouseZone.innerHTML = 'Mouse Out!'
+                mouseZone.style.backgroundColor = 'red'
+                mouseZone.style.fontWeight = 'bold'
+                console.log(mouseZone.style);
+            })
+        }
+    </script>
+
+</head>
+
+<body>
+    <div id="eventZone"></div>
+    <button id="btn">click me</button>
+    <span id="msg">button status: normal</span>
+    <h4>mouse position <span id="pos"> </span></h4>
+
+</body>
+
+</html>

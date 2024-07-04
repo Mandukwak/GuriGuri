@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*{
+	"string": "cha",
+	"number": 123,
+	"boolean": true,
+	"null":null,
+	"object": {},
+	"array":[]
+	//"undefined":undefined //에러
+	}*/
+        //Json은 문자열 하나라서 가볍다. JS객체는 무겁다.
+        const user = {
+            naem: 'kim',
+            age: 30,
+            emails: ['jang@naver.com', 'su@naver.com'],
+            //'company-name':  //특수문자시 '' or ""
+            companyName: 'icia'
+        }
+        console.log(user);
+        // const json = JSON.stringify(user) //문자열로 바꾸기
+        console.log(json);
+        console.log(typeof json);
+        // const obj = JSON.parse(json) // js로 바꾸기
+        console.log(obj);
+        //개발자도구 application
+        //로컬스토리지- 사이트에 종속된 반영구 데이터 저장소
+        //세션스토리지- 페이지 닫으면 사라지는 데이터 저장소
+        localStorage.setItem('user', user)
+        localStorage.setItem('user', JSON.stringify(user))
+        localStorage.setItem('user', JSON.stringify(user))
+        console.log((localStorage.getItem('user')));
+        console.log
+    </script>
+</body>
+
+</html>

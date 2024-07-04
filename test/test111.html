@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            background-color: blue;
+        }
+        header ul li {
+            margin-right: 20px;
+        }
+        header ul li a {
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+            color: white;
+        }
+        header ul li:nth-child(2) a {
+            background-color: blue;
+            color: white;
+        }
+        header ul li a:hover {
+            background-color: red;
+        }
+        nav {
+            float: left;
+            width: 30%;
+            background-color: white;
+            padding: 20px;
+            box-sizing: border-box;
+            border: 3px solid black;
+            height: 400px;
+        }
+        section {
+            float: left;
+            width: 70%;
+            background-color: white;
+            padding: 20px;
+            box-sizing: border-box;
+            border: 3px solid black;
+            height: 400px;
+        }
+        .container::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        footer {
+            background-color: yellow;
+            color: black;
+            border: 3px solid black;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+        .form-container {
+            text-align: center;
+        }
+        .form-container input {
+            margin: 20px;
+            display: block;
+            width: calc(100% - 40px);
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .form-container button {
+            padding: 10px 20px;
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .form-container button:hover {
+            background-color: red;
+        }
+        .form-container span {
+            display: block;
+            margin-top: -10px;
+            margin-bottom: 10px;
+        }
+        .form-container .show-password {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">회원가입</a></li>
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <div class="container">
+        <nav>
+            <p>nav영역</p>
+        </nav>
+        <section>
+            <p>Section 영역</p>
+            <form action="회원가입" class="form-container" onsubmit="return validateForm()">
+                <div class="아이디">
+                    <input type="text" class="id" id="id" placeholder="아이디" onblur="validateId()">
+                    <span id="idMsg"></span>
+                </div>
+                <div class="pw">
+                    <input type="password" class="pw" id="pw" placeholder="비밀번호" onblur="validatePassword()">
+                    <span id="pwMsg"></span>
+                </div>
+                <div class="pw-confirm">
+                    <input type="password" class="pw-confirm" id="pw-confirm" placeholder="비밀번호 확인" onblur="validatePasswordMatch()">
+                    <span id="pwConfirmMsg"></span>
+                </div>
+                <div class="이름">
+                    <input type="text" class="name" id="name" placeholder="이름">
+                </div>
+                <div class="전화번호">
+                    <input type="tel" class="tel" id="phone" placeholder="전화번호">
+                </div>
+                <div class="show-password">
+                    <input type="checkbox" id="show-password" onclick="togglePasswordVisibility()"> Show Password
+                </div>
+                <div>
+                    <button type="submit">가입</button>
+                </div>
+            </form>
+        </section>
+    </div>
+    <footer>
+        <p>footer 영역</p>
+    </footer>
+    
+    <script>
+        function validateId() {
+            const id = document.getElementById('id').value;
+            const idMsg = document.getElementById('idMsg');
+            const idRegex = /^(?=.*[a-z])(?=.*\d)[a-z\d]{6,10}$/;
+    
+            if (idRegex.test(id)) {
+                idMsg.style.color = 'green';
+                idMsg.textContent = '사용가능한 아이디입니다';
+            } else {
+                idMsg.style.color = 'red';
+                idMsg.textContent = '올바른 형식이 아닙니다';
+            }
+        }
+    
+        function validatePassword() {
+            const password = document.getElementById('pw').value;
+            const pwMsg = document.getElementById('pwMsg');
+            const pwRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!#$])[A-Za-z\d!#$]{4,8}$/;
+    
+            if (pwRegex.test(password)) {
+                pwMsg.style.color = 'green';
+                pwMsg.textContent = '사용가능한 비번입니다';
+            } else {
+                pwMsg.style.color = 'red';
+                pwMsg.textContent = '올바른 형식이 아닙니다';
+            }
+        }
+    
+        function validatePasswordMatch() {
+            const password = document.getElementById('pw').value;
+            const passwordConfirm = document.getElementById('pw-confirm').value;
+            const pwConfirmMsg = document.getElementById('pwConfirmMsg');
+    
+            if (password === passwordConfirm) {
+                pwConfirmMsg.style.color = 'green';
+                pwConfirmMsg.textContent = '비밀번호가 일치합니다.';
+            } else {
+                pwConfirmMsg.style.color = 'red';
+                pwConfirmMsg.textContent = '일치하지 않습니다.';
+            }
+        }
+    
+        function validateForm() {
+            validateId();
+            validatePassword();
+            validatePasswordMatch();
+            return false; 
+        }
+        
+        function togglePasswordVisibility() {
+            const pwField = document.getElementById('pw');
+            const pwConfirmField = document.getElementById('pw-confirm');
+            const showPassword = document.getElementById('show-password').checked;
+            if (showPassword) {
+                pwField.type = 'text';
+                pwConfirmField.type = 'text';
+            } else {
+                pwField.type = 'password';
+                pwConfirmField.type = 'password';
+            }
+        }
+    </script>
+</body>
+</html>

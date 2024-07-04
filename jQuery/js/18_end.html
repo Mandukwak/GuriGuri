@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</head>
+
+<body>
+
+    <script>
+        let arr = []
+        arr.push({
+            id: 'aaa',
+            pw: '1111'
+        })
+        arr.push({
+            id: 'bbb',
+            pw: '2222'
+        })
+        console.log(arr);
+        // $.each(arr, function (idx, elem) {
+        //     console.log('this:', this);
+        //     console.log('idx:', idx);
+        //     console.log('elem:', elem);
+        // })
+
+        let obj = {
+            id: 'ccc',
+            pw: '1111',
+            age: 10
+        }
+        $.each(obj, function (key, value) {
+            console.log(this);
+            console.log(key);
+            console.log(value);
+            console.log('----------');
+        })
+    </script>
+
+</body>
+
+</html>

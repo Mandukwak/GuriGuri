@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 완료</title>
+    <style>
+        body {
+            background-image: url(../img/다운로드.jpg);
+            font-family: Arial, sans-serif;
+            background-color: ffff26;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            
+        }
+
+        .container {
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        span {
+            font-weight: bold;
+            color: #555;
+        }
+
+        .move {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            height: 40px;
+            width: 200px;
+            background-color: skyblue;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .move:hover {
+            background-color: #009acd;
+        }
+    </style>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function () {
+            $('span').html(JSON.parse(localStorage.getItem('name')));
+            $('.move').click(function () {
+                location.href = 'login2.html';
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h2>회원가입 완료</h2>
+        <span></span>님
+        <div class="move">로그인 화면으로 이동</div>
+    </div>
+</body>
+
+</html>

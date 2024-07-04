@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function valueInfo() {
+            //alert창에 number속성 , range속성의 값(value)을 출력하시오
+        }
+    </script>
+
+</body>
+<fieldset>
+    <legend>number & range</legend>
+    <form action="test">
+        NUMBER(1~10): <input type="number" id="number" name="qty" min="1" max="10" value="1">
+        <br>
+        RANGE(0~10):<input type="range" name="point" id="range" min="0" max="10" value="0" step="2">
+        <input type="button" value="확인" onclick="valueInfo()">
+    </form>
+</fieldset>
+
+</html>

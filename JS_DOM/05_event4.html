@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function () {
+            document.querySelector('#txt1').focus()
+        }
+
+        function fct(txtObj) {
+            // txtObj.focus()
+
+            console.log('입력된 문자열: ', txtObj.value);
+            if (txtObj.value.length === 6) {
+                document.querySelector('#txt2').focus()
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>주민번호 입력하세요</h1>
+    <input placeholder="생일6자리 입력하세요" type="text" id="txt1" onkeyup="fct(this)">
+    -
+    <input type="text" id="txt2">
+
+</body>
+
+</html>

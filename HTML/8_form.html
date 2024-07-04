@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인</title>
+    <style>
+        table {
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <table border="1">
+        <tr>
+            <td>
+                <form name="loginForm" action="login" method="get" onsubmit="return check()">
+                    ID: <input type="text" name="id" id="id" value=""> <br>
+                    PW: <input type="password" name="pw" id="pw"> <br>
+                    <input type="submit" value="로그인">
+                    <input type="button" value="회원가입" onclick="check()">
+                </form>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        function check() {
+            let id = document.getElementById('id').value; //id=cha
+            console.log(id);
+            let pw = document.getElementById('pw').value; //id=cha
+            console.log(pw);
+            if (id == '' || pw == '') {
+                alert('아이디 또는 비번 입력바람!!!')
+                return false; //함수 종료
+            }
+            document.loginForm.submit(); //서버로 전송
+
+        }
+    </script>
+</body>
+
+</html>

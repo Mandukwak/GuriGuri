@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
+</head>
+
+<body>
+    <ol>
+        <li>List item 1</li>
+    </ol>
+    <button id="apnd">Append</button>
+    <button id="ppnd">Prepend</button>
+    <button id="bef">before</button>
+    <button id="aft">after</button>
+    <button id="create">Create</button>
+    <script>
+        let i = 1
+        $('aft').click(function () {
+            i++
+            $('ol').append('<li>List item' + i + '</li>')
+        })
+        $('bef').click(function () {
+            i++
+            $('ol').before('<li>List item' + i + '</li>')
+        })
+        $('#ppnd').click(function () {
+            i++
+            $('<li>List item' + i + '</li>').prependTo('ol')
+        })
+
+
+        $('create').click(function () {
+            let $inputEl = $('<input type="text">')
+
+            // $inputEl.val('aaa').prop('readonly', true).prop('disabled', true)
+            // $('body').append($inputEl)
+            $inputEl.val('aaa').appendTo('body').prop('disabled', true)
+            console.log($inputEl);
+
+
+        })
+    </script>
+</body>
+
+</html>

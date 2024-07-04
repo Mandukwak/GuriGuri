@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function () {
+            let userArray = JSON.parse(localStorage.getItem('userArray'));
+            for (const user of userArray) {
+                for (const key in user) {
+                    $('#id').on('input', function () {
+                        if ($('#id').val().length > 10 || $('#id').val().length < 4) {
+                            $('span').eq(0).html('아이디는 4~10자리입니다').css({
+                                'color': 'red',
+                                'font-size': '15px'
+                            })
+                        } else if ($('#id').val() == user['id']) {
+                            $('span').eq(0).html('중복되는 아이디입니다.').css({
+                                'color': 'red',
+                                'font-size': '15px'
+                            })
+                        } else {
+                            $('span').eq(0).html('적합한 아이디입니다.').css({
+                                'color': 'blue',
+                                'font-size': '15px'
+                            })
+                        }
+                    })
+                }
+            }
+
+        })
+    </script>
+</head>
+
+<body>
+    <form action="">
+        <div class="backg">
+            <table>
+                <tr>
+                    <td colspan="2" style="height: 80px;">
+                        <div class="title">
+                            <h2>회원정보</h2>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="2">
+                        ID
+                    </td>
+                    <td>
+                        <div class="id">
+                            <input type="id" id="id">
+
+                        </div>
+                    </td>
+                <tr>
+                    <td><span style="font-size : 15px">아이디는 4~10자리입니다</span></td>
+                </tr>
+
+
+                </tr>
+                <tr>
+                    <td rowspan="2">
+                        PW
+                    </td>
+                    <td>
+                        <div class="pw">
+                            <input type="password" id="pw">
+                        </div>
+                    </td>
+                <tr>
+                    <td>
+                        <span style="font-size : 15px"> 비밀번호는 8~14자리입니다</span>
+                    </td>
+                </tr>
+                </tr>
+                <tr>
+                    <td rowspan="2">
+                        PW:RE
+                    </td>
+                    <td>
+                        <div class="pwRe">
+                            <input type="password" id="pwRe">
+                        </div>
+                    </td>
+                <tr>
+                    <td> <span></span></td>
+                </tr>
+                </tr>
+                <tr>
+                    <td rowspan="2">
+                        NICK-NAME
+                    </td>
+                    <td>
+                        <div class="name">
+                            <input type="text" id="name">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><span></span></td>
+                </tr>
+
+                <tr>
+                    <td rowspan="2">
+                        BIRTHDAY
+                    </td>
+                    <td>
+                        <div class="birs">
+                            <input type="date" id="birs">
+
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <span></span></td>
+                </tr>
+                <tr>
+                    <td rowspan="2">
+                        E-MAIL
+                    </td>
+                    <td>
+                        <div class="email"><input type="email" id="email">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><span></span></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="height: 80px;">
+                        <div class="go">
+                            <button>회원가입</button>
+                        </div>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let jsObj1 = {
+            id: 'aaa',
+            age: 30
+        }
+        let jsObj2 = {
+            id: 'bbb'
+        }
+
+        jsObj2[age] = 40
+        console.log(jsObj2);
+
+        let objArr = []
+        objArr.push(jsobj1)
+        objArr.push(jsobj2)
+        console.log(objArr);
+
+        let jsMem = {
+            members: objArr,
+            msg: '회원정보리스트'
+        }
+        console.log(jsMem);
+        console.log('jsMem.members:', jsMem.members);
+        console.log('jsMem.members[0]:', jsMem.members[0]);
+        console.log('jsMem.members[0].id:', jsMem.members[0].id);
+        console.log('jsMem.members[0].id:', jsMem.members[0]['id']);
+        
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

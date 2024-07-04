@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="val" />
+    <button type="button" onclick="addList()">추가</button>
+    <br>
+    <ul id="myList">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+
+    </ul>
+
+    <button id="btn1">엘리먼트 추가</button>
+    <button id="btn2" onclick="elemDel(this)">엘리먼트 지우기</button>
+    <button id="btn3">엘리먼트 교체</button>
+    <button id="btn3" onclick="attrRemove()">bClass삭제</button>
+
+    <script>
+        function attrRemove() {
+            버튼요소.removeAttribute(속성명)
+            버튼요소.classList.remove(클래스명)
+        }
+        //요소 변경하기
+        document.querySelector('#btn3').addEventListener('click', function () {
+            let item = document.querySelector('#myList').firstElementChild
+            let txtNode = document.createTextNode('Water')
+
+            item.replaceChild(txtNode, item.firstChild)
+        })
+        //리스트 요소 지우기
+        function elemDel(btn) {
+            console.log('fct:', btn);
+            let myList = document.querySelector('#myList')
+            // console.dir(myLIst.childNides);
+            console.dir(myList.children);
+            myList.removeChild(myList.lastElementChild)
+        }
+        document.querySelector('#btn1').addEventListener('click', function () {
+
+            // console.log('addE:', this);
+            // let btn = document.createElement('button')
+            // btn.innerHTML = 'click me'
+            // //웹페이지 추가
+            // document.body.appendChild(btn)
+
+            //문제> <input type="button" value="click me"> 생설
+            //태그 속성 설정 :setAttribute (속성명 , 값)
+            //객체 속성 설정: 객체,속성명=값
+            // let btn = document.createElement('input')
+            // // btn.type='button'
+            // // btn.value='click me'
+            // btn.setAttribute('type', 'button')
+            // btn.setAttribute('value', 'click me')
+            // // btn.setAttribute('class', 'bClass') 덮어쓰기
+            // btn.classList.add('bClass') //클래스 추가 메소드
+            // document.body.appendChild(btn)
+
+        })
+
+        function addList() {
+            let myList = document.querySelector('#myList')
+            let item = document.createElement('li')
+            item.innerHTML = document.querySelector('#val').value
+            // let txtNode = document.createTextNode('juice')
+            // item.appendChild(txtNode)
+
+            console.log(item);
+            myList.appendChild(item) //부모.appendChild(자식)
+            // document.body.appendChild(item)
+
+        }
+    </script>
+</body>
+
+</html>

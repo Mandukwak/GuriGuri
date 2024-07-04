@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function () {
+            //button태그
+            let buttons = document.querySelectorAll('button')
+            console.log(buttons);
+            for (let i = 0; i < buttons.length; i++) {
+                document.querySelector('#b' + (i + 1)).addEventListener('click', function () {
+                    console.log(this.style.backgroudColor);
+                    if (this.style.backgroudColor === '') {
+                        this.style.backgroundColor = this.innerHTML
+                    } else {
+                        this.style.backgroundColor = ''
+                    }
+
+                })
+            }
+        }
+        // input 태그 버튼
+        // for (let i = 1; i < 4; i++) {
+        //         document.querySelector('#btn' + i).addEventListener('click', function () {
+        //             console.log(this.style.backgroudColor);
+        //             if (this.style.backgroudColor === '') {
+        //                 this.style.backgroundColor = this.value
+        //             } else {
+        //                 this.style.backgroundColor = ''
+        //             }
+
+        //         })
+        //     }
+    </script>
+</head>
+
+<body>
+    <button id="b1">yellow</button>
+    <button id="b2">green</button>
+    <button id="b3">blue</button>
+    <hr>
+    <input type="button" value="black" id="btn1">
+    <input type="button" value="green" id="btn2">
+    <input type="button" value="blue" id="btn3">
+
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const userAge = {
+            name: 'kim',
+            age: 40,
+        }
+        const userEmail = {
+            name: 'lee',
+            email: 'thelee@gmail.com'
+        }
+        //Object mdn 검색: Object.assign() : 클래스명.정적(static) 메소드
+        //.assign()가 prototype에 속해있지 않아서 객체.assing()코딩시 에러이다.
+        //.assign(타겟(대상)객체, 소스객체1[,소스객체2...]): 
+        // 소스객체1개이상을 데이터를 타겟객체로 복사하고 타겟객체를 반환한다.  
+
+        const target = Object.assign(userAge, UserActivation)
+        console.log(target);
+        console.log(userAge);
+        console.log(userEmail);
+        console.log(target === userAge);
+
+        const a = {
+            k: 100
+        }
+        const b = {
+            k: 100
+        }
+        console.log(a === b);
+        const user = {
+            name: 'hong',
+            age: 30,
+            email: 'thehong@email.com'
+        }
+        // console.log(user);
+        // const keys = Object.keys(user)
+        // console.log(keys);
+        // user.email = 'aaa@gmail.com'
+        // console.log(user.email);
+        // console.log(user['email']);
+        // keys.sort();
+        // console.log('keys:', keys);
+        // // const values = keys.map(key => user[key])
+        // const values = [];
+        // for (let i = 0; i < keys.length; i++) {
+        //     values.push(user[keys[i]]);
+        // }
+        // console.log(values);
+        const keyNames = []
+        for (const key in user) {
+            keyNames.push(key)
+        }
+        console.log(keyNames); //['name','age','email']
+        keyNames.sort;
+        console.log(keyNames);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

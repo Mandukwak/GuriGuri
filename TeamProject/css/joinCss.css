@@ -1,0 +1,55 @@
+table {
+    border: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.join {
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.agr {
+    font-size: 22px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.agr1 {
+    display: flex;
+    width: 500px;
+    height: 150px;
+    font-size: 10px;
+    overflow: auto;
+}
+
+.allchk {
+    font-size: 16px;
+}
+
+.chk {
+
+    font-size: 12px;
+}
+
+.age {
+    display: flex;
+    justify-content: center;
+
+}
+
+button {
+    background-color: moccasin;
+    border-radius: 10px;
+}
+
+.join1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* flex Container */
+        .container {
+            background-color: royalblue;
+            /* display flex 부모전용 속성 값 */
+            /* display: inline-flex; 사용빈도 적음 */
+            display: flex;
+            flex-direction: row-reverse;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        /* flex items */
+        .container .item {
+            width: 100px;
+            height: 100px;
+            border: 3px dashed red;
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>
+
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>
+</body>
+
+</html>

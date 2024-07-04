@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //익명 함수 function(){} vs 화살표 함수 ()=>{ }
+        // const double = function (x) {
+        //     return x * 2
+        // }
+        // console.log('double:', double(7));
+        // const doubleArrow = (x) => {   return x * 2 }
+        // const doubleArrow = x => x * 2  //return 생략할것
+        // console.log('doubleArrow', doubleArrow);
+        // const doubleArrow= x=>{return 'abc'}
+        // const doubleArrow = x => 'abc' + x
+        // const doubleArrow = x => [x, x, x]
+        // console.log(doubleArrow(10));
+        // const doubleArrow = x => ({
+        //     name: 'cha',
+        //     age: x
+        // })
+        // console.log('js 객체:', doubleArrow(20));
+
+        //문2> 아래 함수를 화살표 함수로 바꾸고 호출후 출력하시오
+        // // let add = function (a, b) {
+        // //     return a + b
+        // }
+        let add = (a, b) => a + b;
+        // // let sub = function (a, b) {
+        // //     return a - b
+        // }
+        let sub = (a, b) => a - b;
+        // let mul = function (a, b) {
+        //     return a * b
+        //}
+        let mul = (a, b) => a * b;
+        console.log(add(1, 2));
+        console.log(sub(1, 2));
+        console.log(mul(1, 2));
+
+        //문제3> 
+        function abc(a) {
+            document.write(a())
+        }
+        //아래를 화살표 함수로 변경하여 100출력하시오
+        // abc(function () {
+        //     return 100
+        // })
+        abc(() => 100)
+
+        //문제4>구구단 출력 함수를 화살표 함수로 정의하시오
+        let gugudan = dan => {
+            document.write('<br>=====' + $dan + ' 5dan =====<br>')
+            for (let i = i; i < 10; i++) {
+                document.write(`${dan}+${i} = ${dan*i}<br>`)
+            }
+        }
+
+        gugudan(5)
+        //실행예
+        //===== 5dan =====
+        // 5 * 1 = 5
+        // 5 * 2 = 10
+        // ...중략
+        // 5 * 9 = 45
+    </script>
+
+
+</head>
+
+<body>
+
+</body>
+
+</html>

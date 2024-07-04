@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function check() {
+            // console.dir(document);
+            // console.dir(document.loginFrm);
+            const idEl = document.getElementById('id')
+            const pwEl = document.getElementById('pw')
+            if (idEl.value === '' || idEl.value.length < 4 || idEl.value.length > 10) {
+                alert('아이디는 4~10자 사이입니다')
+                idEl.focus()
+                return false;
+            }
+            if (pwEl.value === '') {
+                alert('비번 입력하세요')
+                pwEl.focus()
+                return false;
+            }
+            document.loginFrm.submit()
+        }
+
+        function check2() {
+            let frm = document.forms[0]
+            console.dir(frm);
+            for (let i = 0; i < frm.length - 3; i++) {
+                if (frm[i].value === '') {
+                    alert(frm[i].id + '를 입력바람')
+                    frm[i].focus()
+                    return false;
+                }
+                return true;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form name="loginFrm" action="login" method="get" onsubmit="return check2()">
+        아이디:<input id="id" type="text" name="userId" /><br>
+        비번:<input id="pw" type="password" name="userPw" /><br>
+        <input type="submit" value="submit">
+        <button>버튼태그</button>
+        <input type="button" value="일반버튼" onclick="check()">
+        <!-- <select name="" id=""></select>
+        <textarea name="" id="" cols="50" rows="10"> -->
+
+        </textarea>
+    </form>
+
+</body>
+
+</html>

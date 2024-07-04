@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</head>
+
+<body>
+    <div class="ancestors">
+        <div class="parents" style="width:500px;">
+            div(.parents)
+            <ul>ul
+                <li>li
+                    <span class="first">span</span>
+                </li>
+            </ul>
+        </div>
+        <div class="parents" style="width:500px;">
+            div(.parents)
+            <p>p
+                <span class="second">span</span>
+            </p>
+        </div>
+    </div>
+    <button id="child">자식찾기</button>
+    <button id="find">span 찾기</button>
+    <button id="findAll">자식 전체 찾기</button>
+    <script>
+        $('child').click(function(){
+            $('.parents')
+        })
+    </script>
+</body>
+
+</html>

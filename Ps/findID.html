@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아이디/비밀번호 찾기</title>
+
+</head>
+
+<body>
+
+    <form name="idfindscreen" method="POST">
+        <div class="search-title">
+            <h3>휴대폰 본인확인</h3>
+        </div>
+        <section class="form-search">
+            <div class="find-name">
+                <label>이름</label>
+                <input type="text" name="member_name" class="btn-name" placeholder="등록한 이름">
+                <br>
+            </div>
+            <div class="find-phone">
+                <label>번호</label>
+                <input type="text" onKeyup="addHypen(this);" name="member_phone" class="btn-phone"
+                    placeholder="휴대폰번호를 '-'없이 입력">
+            </div>
+            <br>
+        </section>
+        <div class="btnSearch">
+            <input type="button" name="enter" value="찾기" onClick="id_search()">
+            <input type="button" name="cancle" value="취소" onClick="history.back()">
+        </div>
+    </form>
+
+
+    <!-- <h2>아이디/비밀번호 찾기</h2>
+    <div>
+        <h3>아이디 찾기</h3>
+        <label for="name">이름:</label>
+        <input type="text" id="name" required><br><br>
+        <label for="hp">휴대폰 번호:</label>
+        <input type="text" id="hp" required><br><br>
+        <button onclick="findId()">찾기</button>
+        <div id="idResult"></div>
+    </div>
+
+    <div>
+        <h3>비밀번호 찾기</h3>
+        <label for="id">아이디:</label>
+        <input type="text" id="id" required><br><br>
+        <label for="hp2">휴대폰 번호:</label>
+        <input type="text" id="hp2" required><br><br>
+        <button onclick="findPassword()">찾기</button>
+        <div id="passwordResult"></div>
+    </div>
+
+    <script>
+        function findId() {
+            var name = document.getElementById('name').value;
+            var hp = document.getElementById('hp').value;
+            var idResult = document.getElementById('idResult');
+
+            fetch('findId.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        name: name,
+                        hp: hp
+                    })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.error) {
+                        idResult.innerText = data.error;
+                    } else {
+                        idResult.innerText = "아이디: " + data.id;
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        }
+
+        function findPassword() {
+            var id = document.getElementById('id').value;
+            var hp = document.getElementById('hp2').value;
+            var passwordResult = document.getElementById('passwordResult');
+
+            fetch('findPassword.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        id: id,
+                        hp: hp
+                    })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.error) {
+                        passwordResult.innerText = data.error;
+                    } else {
+                        passwordResult.innerText = "비밀번호: " + data.password;
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        }
+    </script> -->
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const kim = {
+            //property(속성): 값
+            firstName: 'kim',
+            lastName: 'dong',
+            //메소드
+            showInfo: function () {
+                console.log(`${this.firstName} ${this.lastName}`);
+            }
+        } //object end
+        kim.showInfo()
+
+        function User(first, last) {
+            this.firstName = first;
+            this.lastName = last;
+            this.showInfo = function () {
+                console.log(`${this.firstName} ${this.lastName}`);
+            }
+        } //생성자  함수
+        const lee = new User('lee', 'na')
+        const park = new User('park', 'su')
+        lee.showInfo()
+        park.showInfo()
+        console.log(lee);
+        console.log(park);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

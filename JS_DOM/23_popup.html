@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="conf()">confirm</button>
+    <script>
+        function conf() {
+            let result = confirm('정말로 삭제함?')
+            if (result === true) {
+                alert('삭제 완료')
+            } else {
+                alert('삭제 취소됨')
+            }
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,5 @@
+/* 직렬 방식: main.css를 링크해야 box.css가 링크가 된다.(많이 사용되지 않음 */
+/* @import url("./box.css"); */
+div{
+  font-size: 100px;
+}

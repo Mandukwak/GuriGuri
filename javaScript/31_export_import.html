@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>index.html</title>
+
+  <script type="module">
+    //main.js에 export함수가 없을때 import
+    //import * as M from './js/main.js'
+    import {} from './js/main.js'
+    import rand from './js/getRandom.js'
+    console.log('html', rand(), rand())
+    console.log('body 태그실행후 처리됨');
+  </script>
+
+
+</head>
+
+<body>
+  <h1>Hello world!</h1>
+  <ul></ul>
+
+
+</body>
+
+</html>

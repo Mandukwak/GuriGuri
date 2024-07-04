@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const numbers = [1, 2, 3, 4]
+        const fruits = ['Apple', 'Banana', 'Cherry']
+        const a = numbers.map(element => {
+            return element < 3
+        })
+        console.log(a);
+
+        const b = numbers.filter(number => number < 3)
+        console.log(b);
+
+        const c = fruits.find(fruit => {
+            return /^B/.test(fruit)
+        })
+        console.log(c);
+        const d = fruits.findIndex(fruit => {
+            return /^C/.test(fruit)
+        })
+        console.log(d);
+        const e = numbers.includes(3)
+        console.log(e);
+        const f = fruits.includes('kim')
+        console.log(f);
+
+        function sliceEx() {
+            let newArr = numbers.slice(1, 3);
+            console.log(newArr);
+            newArr = numbers.slice(1);
+            console.log(newArr);
+        }
+        sliceEx()
+        console.log(numbers);
+
+        //.push(): 배열 가장뒤쪽에 데이터 삽입(아주 중요) 
+        //.unshift(): 배열 가장앞쪽에 데이터 삽입(나름 중요)
+        //배열 원본 수정됨(주의)
+        numbers.push(5)
+        console.log('1:', numbers) //[1,2,3,4,5]
+        numbers.unshift(0)
+        console.log('2:', numbers) //[0,1,2,3,4,5]
+        //.pop() : 배열의 맨뒤쪽 요소 삭제
+        numbers.pop();
+        console.log('3:', numbers) //[0,1,2,3,4]
+
+        //.splice(접착)(인덱스, 숫자): 인덱스번호부터 해당하는 데이터를 숫자만큼 삭제 
+        const numbers2 = [1, 2, 3, 4]
+        const fruits2 = ['Apple', 'Banana', 'Cherry']
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

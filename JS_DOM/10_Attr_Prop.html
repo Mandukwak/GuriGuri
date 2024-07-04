@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="checkbox" name="" id="">
+    <input type="checkbox" id="chk"checked>
+    <button id="chkbtn1">체크상태값 확인</button>
+    <button id="chkbtn2">체크상태값 설정</button>
+
+    <script>
+        let chk = document.querySelector('#chk')
+        let chkbtn1 = document.querySelector('#chkbtn1')
+        chkbtn1.addEventListener('click', function () {
+            chk.cheked = true
+            // console.log(chk.getAttribute('cheked'));
+
+        })
+        chkbtn1.addEventListener('click', function () {
+            console.dir(chk);
+        })
+    </script>
+</body>
+
+</html>

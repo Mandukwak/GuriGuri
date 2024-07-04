@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const user = {
+            name: 'kim',
+            age: 30,
+            email: 'thekim@gamil.com'
+        }
+        // let name=user.name
+        // let age=user.age
+        // let email=user.email
+        let {
+            age,
+            name: irum,
+            addr = '인천'
+        } = user
+        console.log(age);
+        console.log(addr);
+        console.log(irum);
+
+        showNameAgeInfo(user)
+
+        function showNameAgeInfo({
+            name,
+            age
+        }) {
+            console.log(`name=${user.name}, age=${user.age}`);
+        }
+
+        const fruits = ['apple', 'banana', 'cherry']
+        //const [a,b,c,d='mango']=fruits
+        // console.log(a,b,c,d);
+        const [a, , c] = fruits
+        console.log(a, c);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

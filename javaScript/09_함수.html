@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function sum(x, y) {
+            return x + y
+        }
+        const a = sum(1, 3)
+        const b = sum(4, 12)
+        console.log(a, b)
+        console.log(a + b)
+        console.log(sum(10, 20) + sum(10, 20));
+        console.log('------------');
+
+        function f1() {
+            function f2() {
+                console.log('로컬 함수');
+            }
+            f2()
+        }
+        f1()
+        // f2() //에러
+        const sum2 = function (x, y) {
+            if (x < 2) return
+            return x + y
+        }
+        console.log(sum2(4, 6));
+        console.log(sum2(10, 6));
+
+        function abc(a) {
+            document.write(a())
+        }
+        abc(function () {
+            return 100
+        })
+
+        function abc() {
+            return function () {
+                return 100
+            }
+        }
+        document.write(abc() + "<br>")
+        document.write(abc()())
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

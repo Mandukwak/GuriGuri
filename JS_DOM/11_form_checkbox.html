@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function () {
+            document.forms[1].elements[0].onclick = function () {
+                console.log(this.checked);
+                for (let i = 1; i < 3; i++) {
+                    document.forms[1].elements[i].checked=this.checked
+                }
+            }
+        }
+    </script>
+
+
+
+</head>
+
+<body>
+    <form action="">
+        <input type="text">
+        <input type="text">
+    </form>
+    <form>
+        <input type="checkbox">
+        <input type="checkbox">
+        <input type="checkbox">
+
+    </form>
+</body>
+
+</html>

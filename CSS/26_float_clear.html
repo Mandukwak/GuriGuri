@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box_container {
+            padding: 10px;
+            background-color: bisque;
+            height: 100px;
+            overflow: hidden;
+        }
+
+        .box_container .box {
+            float: left;
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+            background-color: #0099ff;
+        }
+
+        /* .box_container div:nth-child(1),
+        .box_container div:nth-child(2) {
+            float: left;
+        } */
+    </style>
+</head>
+
+<body>
+    <h2>넘침 제어</h2>
+    <div class="wrap">
+        <div class="container">
+            <div class="box_container clearfix">
+                <div class="box">Box1</div>
+                <div class="box">Box2</div>
+                <div class="box">Box3</div>
+                <div class="box">Box4</div>
+            </div>
+            <div class="box_container clearfix">
+                <div class="box">Box1</div>
+                <div class="box">Box2</div>
+                <div class="box">Box3</div>
+                <div class="box">Box4</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

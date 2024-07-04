@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js">
+    </script>
+    <script>
+        const user = {
+            name: 'kim',
+            age: 40,
+            emails: ['thekim@gamil.com']
+        }
+        // const copyUser = user;
+        // const copyUser = Object.assign({}, user)
+        // let copyUser = {
+        //     name: user.name,
+        //     age: user.age,
+        //     emails: user.emails
+        // }
+        // copyUser.emails.push('new@gamil.com')
+        // console.log(user, copyUser, user === copyUser);
+        // console.log(user.emails === copyUser.emails);
+        // copyUser.age = 10
+        // console.log(copyUser.age, user.age);
+        let copyUser = {}
+        deepCopy(user, copyUser)
+        console.log("deepCopy after");
+        user.emails.push('user3@daum.net')
+        console.log(user, copyUser, user == copyUser);
+
+        function deepCopy(source, target) {
+            target.name = source.name
+            target.age = source.age
+            target.emails = []
+            for (const email of source.emails) {
+                target.emails.push(email)
+            }
+            target.name = source.name
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

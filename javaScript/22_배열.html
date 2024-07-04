@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    // const numbers=new Array(1,2,3,4)
+    const numbers = [1, 2, 3, 4]
+    const fruits = ['Apple', 'Banana', 'Cherry']
+    console.log(numbers);
+    console.log(numbers.length);
+    console.log([1, 2].length);
+    console.log([].length);
+    console.log(numbers.concat(fruits));
+    console.log(numbers);
+    console.log(fruits);
+    numbers.push(function () {
+        console.log('함수객체');
+    })
+    // numbers[4]()
+    numbers[numbers.length - 1]()
+    console.log(numbers.pop());
+</script>
+
+<body>
+
+</body>
+
+</html>

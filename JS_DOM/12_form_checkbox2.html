@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function () {
+            document.forms[1].elements[0].onclick = function () {
+                console.log(this.checked);
+                for (let i = 1; i < 3; i++) {
+                    document.forms[1].elements[i].checked=this.checked
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>우리 분식</h1>
+    <form>
+        <input type="checkbox" value="1000"> 김밥(1,000) <br>
+        <input type="checkbox" value="4000"> 라면(4,000) <br>
+        <input type="checkbox" value="6000"> 떡복이(6,000) <br>
+        <input id="btn" type="button" value="계산"><br>
+        <input type="text" id="sum"> 원
+
+    </form>
+
+</body>
+
+</html>

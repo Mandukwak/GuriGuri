@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function () {
+            //     document.querySelector('#btn').addEventListener('click', function () {
+            //         this.value = 'bbb'
+            //     })
+            // }
+            // document.querySelector('#btn').onclick = function () {
+            //     this.value = 'bbb'
+        }
+
+        function operator(btnObj) {
+            const num1 = parseInt(document.querySelector('#num1').value)
+            const num2 = parseInt(document.querySelector('#num2').value)
+            let result = 0;
+            switch (btnObj.value) {
+                case '+':
+                    result = num1 + num2
+                    break;
+                case '-':
+                    result = num1 - num2
+                    break;
+                case '*':
+                    result = num1 * num2
+                    break;
+
+
+            }
+            document.querySelector('#result').value = result
+        }
+    </script>
+</head>
+
+<body>
+    <input type="button" value="aaa" id="btn">
+
+    <hr>
+    <input type="text" id="num1"> <br>
+    <input type="button" value="+" onclick="operator(this)">
+    <input type="button" value="-" onclick="operator(this)">
+    <input type="button" value="*" onclick="operator(this)"> <br>
+    <input type="text" id="num2"><br>
+    <input type="button" value="=" disabled><br>
+    <input type="text" id="result">
+</body>
+
+</html>

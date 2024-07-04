@@ -1,0 +1,96 @@
+body {
+    background-image: url("./img/chrom_dino_run_360.webp");
+    background-size: contain;
+    background-attachment: fixed;
+    margin: auto;
+    overflow: hidden;
+}
+
+table {
+    border: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 80%;
+}
+
+table:hover {
+    opacity: 100%;
+}
+
+.join {
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+
+.agr {
+    font-size: 35px;
+    font-weight: 900;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.agr1 {
+    display: flex;
+    width: 700px;
+    height: 180px;
+    font-size: 15px;
+    overflow: auto;
+}
+
+.allchk {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.chk {
+
+    font-size: 17px;
+}
+
+.age {
+    display: flex;
+    justify-content: center;
+
+}
+
+button {
+    margin: 20px 0 0 0;
+    width: 250px;
+    font-size: 30px;
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: rgb(195, 206, 215);
+}
+
+
+
+.ckb {
+    border: 0;
+    border-radius: 0 10px 0 10px;
+
+
+}
+
+.ckbx.ch {
+    background-color: rgb(241, 231, 213);
+}
+
+.ckbx {
+    border-radius: 8px;
+    background-color: azure;
+    padding: 5px 3px 5px 5px;
+}
+
+.err {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

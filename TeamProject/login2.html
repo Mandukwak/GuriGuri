@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/loginCss.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <form action="login">
+        <div id="logo">
+            <!-- logo start -->
+            <img src=""> <!-- 로고정해지면 변경 -->
+        </div> <!-- logo end -->
+        <div id="login">
+            <!-- login start -->
+            <div class="id">
+                <!-- id start -->
+                <input type="text" class="id" id="id" placeholder="아이디">
+            </div> <!-- id end -->
+            <div class="pw">
+                <!-- pw start -->
+                <input type="password" class="pw" id="pw" placeholder="비밀번호">
+            </div> <!-- pw end -->
+            <div class="error">
+                <!-- error start -->
+                <span id="errorpw"></span>
+                <span id="errorid"></span>
+            </div> <!-- error end -->
+            <div class="log">
+                <!-- loginbutton start -->
+                <button id="log"> 로그인 </button>
+                <div class="a">
+                    <!-- 아이디, 비밀번호 찾기, 회원가입  -->
+                    <a href="finder.html" class="a">ID,PW 찾기 | </a>
+                    <a href="join.html" class="a">회원가입</a>
+                </div> <!-- 아이디, 비밀번호 찾기, 회원가입 끝 -->
+            </div> <!-- loginbutton end -->
+        </div> <!-- login end -->
+
+    </form>
+    <script>
+    </script>
+    <script>
+        $('#log').click(function () {
+            let id = $('#id').val()
+            let pw = $('#pw').val()
+            let id1 = JSON.parse(localStorage.getItem('id', id))
+            let pw1 = JSON.parse(localStorage.getItem('pw', pw))
+            console.log(id);
+            console.log(pw);
+            console.log(id1);
+            console.log(pw1);
+            if (id != id1) { //아이디 비교하기
+                $('#errorpw').html('')
+                $('#errorid').html('아이디가 일치하지 않습니다. 아이디를 확인해주세요.')
+            } else {
+                if (pw != pw1) { //비밀번호 비교하기
+                    $('#errorid').html('')
+                    $('#errorpw').html('비밀번호가 일치하지 않습니다. 비밀번호를 확인해주세요.')
+                } else {
+                    location.href = "메인 주소"
+                }
+            }
+        })
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    오브젝트 : employee<br />
+    firstName : <input id="fn" type="text" /><br />
+    lastName : <input id="ln" type="text" /><br />
+    <button id="add">리스트 추가</button>
+    <p id="result"></p>
+    <div id="showList" style="height: 200px;border:1px solid blue"></div>
+    <script>
+        let addBtn = document.getElementById('add')
+        addBtn.addEventListener('click', addObject)
+
+        let obj = {}
+        let list = [] //
+        function addObject() {
+            let person = {}
+            let first = document.getElementById('fn').value
+            let last = document.getElementById('ln').value
+            person.firstName = first
+            person.lastName = last //
+            list.push(person)
+            obj.employee = list
+            console.log(obj);
+            //js객체 --> json
+            let json = JSON.stringify(obj)
+            document.getElementById('result').innerHTML = json
+            // 문제> div에 회원정보 출력
+            //firstName: 홍 lastName: 길동
+            //firstName: 차 lastName: 지헌
+            // 문제> div에 출력
+            //firstName: 홍   lastName: 길동
+            //firstName: 차   lastName: 지헌
+            // let str = ''
+            // for (let person of obj.employee) {
+            //   for (let key in person) {
+            //     //str += (key + " : " + person[key] + "  ");
+            //     str += `${key}:${person[key]}  `;
+            //   }
+            //   str += '<br>';
+            // }
+            // document.getElementById('showList').innerHTML = str;
+
+            let showList = document.getElementById('showList')
+            showList.innerHTML = ''
+            for (let person of obj.employee) {
+                for (let key in person) {
+                    let txtNode = document.createTextNode(`${key}:${person[key]}  `);
+                    showList.appendChild(txtNode) //반복문 돌면서 div에 출력
+                }
+                showList.innerHTML += '<br>'
+                //showDiv.appendChild(document.createElement('br'));
+            }
+        }
+    </script>
+
+</body>
+
+</html>

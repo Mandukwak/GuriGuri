@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="loc">네이버로 이동</button>
+    <input type="button" value="뒤로가기" onclick="goback()">
+    <input type="button" value="앞으로가기" onclick="goForward()">
+    <script>
+        function goBack() {
+            history.back() //주의 서버가 아닌 로컬PC에서 가져옴
+        }
+
+        function goForward() {
+            history.forward()
+        }
+
+        document.querySelector('#loc').addEventListener('click', function () {
+            console.log(location);
+            console.log('현재 페이지 주소:', location.href);
+            location.href = 'http://www.naver.com'
+
+
+        })
+    </script>
+</body>
+
+</html>

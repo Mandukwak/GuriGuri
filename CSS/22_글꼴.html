@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    h1{
+      /* 기본값: 16px,  단위:px,em,rem */
+      font-size: 24px;
+      /*기본값: normal(400),  bold(700), 100~900 */
+      font-weight: 700;
+      /* 기본값: normal */
+      font-style: italic;
+      /* 글꼴 후보1, 후보2,...글꼴 계열(필수, 후보가 없을때 계열에서 선택) */
+      /* sans-serif(고딕체계열), serif(바탕체계열) */
+      /* font-family: serif; */
+      /* font-family: "Times New Roman", Times, serif; */
+    }
+    p{
+      width: 350px;
+	  height: 200px;
+      padding: 10px;
+      border: 1px solid;
+      /* boxModel크기를 width:350px로 자동맞춤 */
+      box-sizing: border-box;
+      /*줄 높이(세로가운데정렬시 사용,현재는 flex로 정렬함), 단위:px, 배수, %  */
+      line-height: 32px;  /*글자크기 변경시 매번 변경 */
+      line-height: 2;  /* 자동으로 두배(권장) */
+      /* line-height: 200%; */
+	  margin: 0 auto; 
+    }
+  </style>
+</head>
+
+
+<body>
+  <h1>Hello world!</h1>
+  <p>Shown in the Times New Roman font.
+     Shown in the Times New Roman font.
+  </p>
+ 
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .move {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 20px;
+            width: 160px;
+            background-color: aqua;
+        }
+    </style>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function () {
+
+            $('span').html(JSON.parse(localStorage.getItem('name')))
+
+
+            $('.move').click(function () {
+                location.href = 'login2.html'
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div>
+        <h2>환영합니다</h2>
+        <span></span>님
+    </div>
+    <div class="move">
+        로그인 화면으로 이동
+    </div>
+</body>
+
+</html>

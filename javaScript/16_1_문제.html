@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // function Member(name, age) {
+        //     this.name = name
+        //     this.age = age
+        //     this.setName = function (name) {
+        //         this.name = name
+        //     }
+        //     this.showInfo = function () {
+        //         console.log(`name:${this.name},age:${this.age}`);
+        //     }
+        //     this.toString = function () {
+        //         return `이름:${this.name},나이:${this.age}`
+        //     }
+
+
+
+        // const kim = new Member('kim', 10)
+        //리터럴 객체 생성
+        const kim = {
+            name: 'kim',
+            age: 10,
+            setName: function (name) {
+                this.name = name
+            },
+            showInfo: function () {
+                console.log(`name:${this.name}, age:${this.age}`);
+            },
+            toString: function () {
+                return `이름:${this.name}, 나이:${this.age}`
+            }
+        }
+        kim.setName('kim2')
+        kim.showInfo()
+        console.log(kim.toString());
+        document.write(kim)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

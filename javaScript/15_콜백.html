@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //콜벡(callback)
+        function timeout(cb) {
+            setTimeout(() => {
+                cb()
+                console.log('hello');
+                cb()
+            }, 3000)
+        }
+        timeout(() => {
+            console.log('Done!')
+        })
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

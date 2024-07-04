@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const arr = []
+
+        function input() {
+            let txtEl = document.querySelector('input')
+            arr.push(parseInt(txtEl.value))
+            txtEl.value = ''
+            txtEl.focus()
+            // console.log(arr);
+        }
+
+        function getMaxMin(btn) {
+            console.log(btn, arr);
+            let max, min
+            max = min = arr[0]
+            if (btn.value === 'Max') {
+                for (const val of arr) {
+                    if (max < val)
+                        max = val
+                }
+                console.log('최대값: ' + max);
+            } else { //min버튼
+                for (const val of arr) {
+                    if (min > val)
+                        min = val
+                }
+                console.log('최소값: ' + min)
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" />
+    <input type="button" value="입력" onclick="input()" />
+    <input type="button" value="Max" onclick="getMaxMin(this)" />
+    <input type="button" value="Min" onclick="getMaxMin(this)" />
+
+
+</body>
+
+</html>
